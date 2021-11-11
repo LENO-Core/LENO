@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=LenoCore
+Comment=LenoCore P2P Cryptocurrency
+Comment[fr]=LenoCore, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=LenoCore, eşten eşe kriptografik sanal para birimi
+Exec=lenocore-qt %u
+Terminal=false
+Type=Application
+Icon=lenocore128
+MimeType=x-scheme-handler/lenocore;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+[Unit]
+Description=LenoCore's distributed currency daemon
+After=network.target
+
+[Service]
+User=lenocore
+Group=lenocore
+
+Type=forking
+PIDFile=/var/lib/lenocored/lenocored.pid
+
+ExecStart=/usr/bin/lenocored -daemon -pid=/var/lib/lenocored/lenocored.pid \
+          -conf=/etc/lenocore/lenocore.conf -datadir=/var/lib/lenocored
+
+ExecStop=-/usr/bin/lenocore-cli -conf=/etc/lenocore/lenocore.conf \
+         -datadir=/var/lib/lenocored stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
