@@ -1,4 +1,4 @@
-![Logo](https://www.leno.finance/img/logo/leno.png)
+![Logo](https://avatars.githubusercontent.com/u/93791157?v=4)
 
 
 ### Links
